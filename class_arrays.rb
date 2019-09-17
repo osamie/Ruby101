@@ -1,11 +1,12 @@
 class Arrays
+
     # Illustrative - Instance variable holding a reference to the array
-    @values
+    attr_accessor :values 
 
     # Illustrative - Constructor for class
     def initialize(input = [])
         @values = input
-        puts "Initializing an array now with #{@values}"
+        puts "Initializing Instance with #{@values}" 
     end
 
     # Given an Array, returns the elements 
@@ -36,9 +37,12 @@ class Arrays
 
         return "#{non_duplicate}"
     end
+
 end
 
-# r = Arrays.new([1,6,7,3])
-puts Arrays.non_duplicated_values([1,2,3,4,5,6,2,2,2,9,3])
+r = Arrays.new([1,6,7,3])
+r.values = [1,2,3]
+puts "Modified instance variable: #{r.values}"
+# puts Arrays.non_duplicated_values([1,2,3,4,5,"you",2,2,9,3])
 
 
